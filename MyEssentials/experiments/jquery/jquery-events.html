@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Jquery Mouse Events</title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".singleClick").click(function () {
+                $(this).hide();
+            });
+            $(".doubleClick").dblclick(function () {
+                $(this).hide();
+            });
+    });
+    </script>
+
+</head>
+<body>
+    <h1>Jquery Events</h1>
+    <h3>Documentation:</h3>
+    <pre>
+In this experiment, we will use JQuery Event handling on mouse events.
+</pre>
+    <div class="container">
+        <h3>Example 1: onClick Events - Single Click</h3>
+        
+        <div class="col-sm-4">
+            <p class="badge singleClick">Click here to make it go away...!</p><br />
+            <p class="badge singleClick">Try it out again, click again and see.. it disappears!</p><br />
+        </div>
+        <div class="col-sm-8">
+            <pre> 
+The experiment besides, uses mouse single-click event to hide the text
+</pre>
+        </div>
+    </div>
+    <div class="container">
+        <h3>Example 2: onClick Events - Double Click</h3>
+
+        <div class="col-sm-4">
+            <p class="badge doubleClick">Double Click here to make it go away...!</p><br />
+            <p class="badge doubleClick">Try it out again, double-click again and see.. it disappears!</p><br />
+        </div>
+        <div class="col-sm-8">
+            <pre>
+The experiment besides, uses mouse double-click event to hide the text
+</pre>
+        </div>
+    </div>
+    
+    <h3>Source Code</h3>
+    <p>
+        <a href="../../fileview/Default.aspx?~/Experiments/jquery/jquery-events.html" target="_blank">View Source</a>
+    </p>
+    
+
+    <h3>References</h3>
+    <ol>
+        <li>
+            <a href="http://www.w3schools.com/jquery/jquery_events.asp" target="_blank">
+                W3schools
+            </a>
+        </li>
+        <li>
+            <a href="http://en.wikipedia.org/wiki/JQuery" target="_blank">
+                Jquery Wiki
+            </a>
+        </li>
+        
+    </ol>
+    </body>
+</html>
