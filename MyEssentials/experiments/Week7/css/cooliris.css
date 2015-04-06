@@ -1,0 +1,25 @@
+﻿body {
+  font-family: monospace;
+}
+#wall {
+  background-color: #f4f4f4;
+  height: 450px;
+  text-align: center;
+}
+#demo-log-box {
+  border: 1px solid #eee;
+  padding: 10px;
+}
+#demo-log {
+  white-space: pre-wrap;
+}
+
+    .div-element {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -50px;
+        margin-left: -50px;
+        width: 100px;
+        height: 100px;
+    }

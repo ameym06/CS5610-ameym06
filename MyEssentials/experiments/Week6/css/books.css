@@ -1,0 +1,16 @@
+﻿
+h2
+{
+    color: navy;
+}
+
+.itemTitle
+{
+    font-weight: bold;
+}
+
+.itemThumbnail
+{
+    float: left;
+    margin-right: 20px;
+}

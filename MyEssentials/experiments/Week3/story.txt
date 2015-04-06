@@ -1,0 +1,5 @@
+jquery-intro.html				Image Manipulation using JQuery and Slider
+jquery-fade-out.html			JQuery Fade Out
+jquery-fade-toggle.html			JQuery Fade Toggle
+jquery-autocomplete.html		JQuery AutoComplete of States
+jquery-selectors.html			JQuery Selectors

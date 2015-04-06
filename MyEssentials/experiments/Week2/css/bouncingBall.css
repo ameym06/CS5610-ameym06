@@ -1,0 +1,7 @@
+﻿#bounce_canvas {
+            width: 50%;
+            height: 30%;
+            border: 2px solid black;
+            box-sizing: border-box;
+            background-color:azure;
+        }

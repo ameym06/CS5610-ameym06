@@ -1,0 +1,84 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Movie of the Day</title>
+        <link rel="stylesheet" type="text/css" href="./css/profile.css" />
+        <link rel="stylesheet" type="text/css" href="./css/schedule.css" />
+    </head>
+     <body>
+        <header>
+            <h1>Movie of the Day</h1>
+        </header>
+   
+        <h2>Description</h2>
+        <p>
+            An AJAX call is employed to query IMDB and generate a movie page. The response is a JSON object with detailed information about the movie in various fields such as name, abridged and complete plot, poster, languages, writers, etc. The object is converted to a plain text string which is then parsed using regular expressions to extract the name, complete plot and movie poster. Finally, this filtered information undergoes formatting and is displayed on the HTML page. The response format is JSONP and 'My API Films' is used to get the request URI.
+        </p>
+
+        <button class="imdbBtn">Today's Movie</button>
+        <div>
+            <h3 class="filmTitle"></h3>
+            <img class="filmPoster" src=""></img>
+            <p class="filmPlot"></p>
+        </div>
+
+        <hr />
+
+        <h2>Documentation</h2>
+        <h3>jQuery AJAX and Regex</h3>
+        <p>
+            This experiment consists of using AJAX and Regular expressions. An AJAX call is made to My API Films on the click on 'imdbBtn' button. The data type expected in response is set to JSONP and a sequence of actions performed on receiving the desired response. The response object is output to the browser's console followed by the retrieval of an equivalent plain-text string using 'JSON.stringify' method. 
+            Regular expressions are created and used to extract the film's name, plot and poster. 
+        </p>
+
+        <!-- Code section : BEGIN -->
+        <code class="code-item">
+            $(".imdbBtn").click(function()<br />
+            {<br />
+            $.ajax(<br />
+            {<br />
+            url: "...",<br />
+            dataType: "jsonp",<br />
+            success: function(response)<br />
+            {<br />
+            console.log(response);<br />
+            var responseStr = JSON.stringify(response);<br />
+            <br />
+            /* Create relevant regular expressions objects */<br />
+            var titlePattern = new RegExp("title(.{3})(?=((?:[^\"])+))");<br />
+            var posterPattern = new RegExp("urlPoster(.{3})(?=((?:[^\"])+))");<br />
+            var plotPattern = new RegExp("plot(.{3})(?=((?:[^\"])+))");<br />
+            <br />
+            /* Get relavent fields as strings */<br />
+            var title = responseStr.match(titlePattern);<br />
+            var poster = responseStr.match(posterPattern);<br />
+            var plot = responseStr.match(plotPattern);<br />
+            <br />
+            /* Update approapriate fields in the web page */<br />
+            $(".filmTitle").text(title[2]);<br />
+            $(".filmPoster").attr("src", poster[2]);<br />
+            $(".filmPlot").text(plot[2]);<br />
+            }<br />
+            });<br />
+            });
+        </code>
+         <hr />
+
+        <h2>Source files</h2>
+        <a href="../../fileview/Default.aspx?~/experiments/Week4/jsonp.html">HTML</a>
+        <a href="../../fileview/Default.aspx?~/experiments/Week4/js/getMovie.js">JavaScript</a>
+
+        <h2>References</h2>
+        <ul>
+            <li>Prof. Jose's class notes</li><br />
+            <li><a href="http://www.myapifilms.com/">My API Films</a></li><br />
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">Mozilla Developer Network</a></li>
+        </ul>
+
+        <br /><br />
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="./js/getMovie.js"></script>
+    </body>
+</html>

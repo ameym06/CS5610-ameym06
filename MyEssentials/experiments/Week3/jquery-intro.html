@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Jquery Introductions</title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <style>
+        div {
+            background-color: black;
+            width: 100px;
+            height: 100px;
+            overflow: hidden;
+            margin: 100px;
+            border: 40px black dotted;
+            padding: 40px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1> Jquery Introductions</h1>
+    <h3>Documentations</h3>
+    <p class="container">
+    Something about JQuery...
+        
+            <pre>
+JQuery is a cross-platform JavaScript library designed to simplify the client-side 
+scripting of HTML. Used by mostly every website these days, jQuery is the most popular JavaScript library in use today.
+            </pre>
+    </p>
+    <h3>
+        Example:
+    </h3>
+    <pre>
+In this example, we will see how a Slider is configured to manipulate the size of the test box. 
+Here we take the input as the padding value from the slider and provide that as an input to the script. 
+The Script, in turn controls the dimensions of the box.
+</pre>
+    Slide:
+    <input type="range" min="0" max="100" id="padding" />
+
+    <div>
+    </div>
+     
+
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script>
+        $(main);
+
+        function main() {
+            $("div").css("background-color", "red");
+            $("input#padding").click(updatePadding);
+        }
+
+        function updatePadding() {
+            var padding = $("input#padding").val();
+            console.log(padding);
+            $("div").css("padding", padding);
+        }
+    </script>
+    <h3>Source Code</h3>
+    
+    <p>
+        <a href="../../fileview/Default.aspx?~/Experiments/Week3/jquery-intro.html" target="_blank">View Source</a>
+    </p>
+    <h3>References</h3>
+    
+    <ol>
+        <li>
+            <a href="http://en.wikipedia.org/wiki/JQuery" target="_blank">
+                Jquery Wiki
+            </a>
+        </li>
+        <li>
+            Professor Jose's Class Notes
+           
+        </li>
+    </ol>
+</body>
+</html>

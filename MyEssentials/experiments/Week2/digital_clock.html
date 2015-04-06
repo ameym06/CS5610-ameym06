@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Digital Clock using JavaScript</title>
+    
+</head>
+
+<body onload="startTimer(document.dateform)">
+    
+        Digital Clock
+        <form name="dateform" action="post">
+            <input type="text" name="date" size=50>
+        </form>
+    <br />
+    <p>Today is:</p>
+    <p id="day"></p>
+
+    <script>
+        var d = new Date();
+        var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        document.getElementById("day").innerHTML = days[d.getDay()];
+    </script>
+ <script src="./js/clock.js"></script>
+
+    <h2>Code Documentation</h2>
+    <code>
+        speed = 1000 <br />
+        tid = 0;<br />
+        function displayDate() {<br />
+            format.date.value = new Date();<br />
+            tid = window.setTimeout("displayDate()", speed);<br />
+        }<br />
+        function startTimerss(df) {<br />
+            format = df<br />
+            tid = window.setTimeout("displayDate()", speed);<br />
+        }<br />
+        function cleartid() {<br />
+            window.clearTimeout(tid);<br />
+        }
+    </code>
+
+ <h2>Source Code</h2>
+    <a href="../../fileview/Default.aspx?~/experiments/Week2/digital_clock.html" target="_blank">HTML</a>
+
+<h2>References</h2>
+      <a href="http://www.w3schools.com/js/default.asp">W3Schools JavaScript</a>
+   
+</body>
+
+</html>

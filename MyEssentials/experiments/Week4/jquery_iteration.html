@@ -1,0 +1,42 @@
+﻿
+<html>
+<head>
+    <title>For each loop</title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="./js/iterate.js"></script>
+</head>
+<body>
+
+    <h1>Iterating through data in jQuery</h1>
+    <br />
+    
+    The "$.each" function in jQuery performs an important function of isolating each element in a collection of data in jQuery. This can be combined with HTTP requests and used to display the various data obtained as shown.
+    <div id="one"></div>
+    <div id="two"></div>
+    <div id="three"></div>
+    <div id="four"></div>
+    <div id="five"></div>
+    <button>Click me!</button>
+
+   <h2>Code Documentation</h2>
+    <code>
+        jQuery.each(array, function (i, value) { <br />
+        $("#" + value).text("This is " + value + "."); <br />
+        return value !== "three"; <br />
+    }); <br /> <br />
+
+    jQuery.each(obj, function (i, value) { <br />
+        $("#" + i).append(document.createTextNode(" Now iterating on: " + value)); <br />
+    });
+    </code>
+    <br /><br /><br />References:<br />
+    <a href="http://stackoverflow.com">stackoverflow</a><br />
+    <a href="http://www.w3schools.com">w3schools</a><br /><br />
+
+    Source: <a href="../fileview/Default.aspx?~/experiments/Week4/jquery_iteration.html" target="_blank">HTML</a><br />
+
+
+
+
+</body>
+</html>

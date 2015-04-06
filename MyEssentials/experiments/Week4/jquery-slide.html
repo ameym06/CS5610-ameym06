@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Head section : BEGIN -->
+    <head>
+        <meta charset="UTF-8"/>
+        <title>JQuery Slide</title>
+
+        <!-- Style sheet information -->
+        <link rel="stylesheet" type="text/css" href="css/profile.css" />
+        <link rel="stylesheet" type="text/css" href="css/schedule.css" />
+        <link rel="stylesheet" type="text/css" href="css/unfold.css" />
+    </head>
+    <!-- Head section : END -->
+
+    <!-- Body section : BEGIN -->
+    <body>
+        <!-- Header section : BEGIN -->
+        <header>
+            <h1>JQuery Slide to display a Product</h1>
+        </header>
+        <!-- Header section : END -->
+
+        <!-- Flip division -->
+        <div class="flipBox">Click to know more...</div>
+
+        <!-- Main content division -->
+        <div class="contentBox">
+            <!-- Objective -->
+            <h2>Description</h2>
+            <p>
+                This page uses jQuery's slide method and mouse events to display a new product.
+            </p>
+
+            <hr />
+
+            <h3>Moto 360</h3>
+            <img class="imgBox" src="./images/moto360.jpg">
+            <p>
+                With its stylish good looks, comfortable feel and overall premium build, the Moto 360 is the Android Wear watch to beat. When it comes to design, at least, it outclasses everything else on the market. Aside from aesthetics, the 360 offers many of the same features as its rivals, including a heart rate sensor and a pedometer, plus some other goodies like wireless charging and an ambient light sensor.
+             </p>
+
+            <hr />
+
+            <!-- Documentation -->
+            <h2>Documentation</h2>
+            <h3>Slide effect</h3>
+            <p>
+                It is not safe to manipulate a page until the time it has finished loading. The 'ready' function makes this check to verify when the Document Object Model (DOM) is ready for JavaScript code to safely execute. 'click' is used to detect click events on the selected element, 'hide' does what its name suggests and 'slideDown' slides the mentioned elements. The form used here takes speed as an argument.
+            </p>
+
+            <!-- Code section : BEGIN -->
+            <code class="code-item">
+                $(document).ready(function()<br />
+                {<br />
+                $(".flipBox").click(function()<br />
+                {<br />
+                $(this).hide();<br />
+                $(".contentBox").slideDown(5000);<br />
+                });<br />
+                });
+            </code>
+            <!-- Code section : END -->
+
+            <hr />
+
+            <!-- Source file(s) -->
+            <h2>Source files</h2>
+            <a href="../../fileview/Default.aspx?~/experiments/Week4/jquery-slide.html">HTML</a>
+            <a href="../../fileview/Default.aspx?~/experiments/Week4/css/unfold.css">CSS</a>
+            <a href="../../fileview/Default.aspx?~/experiments/Week4/js/unfold.js">JavaScript</a>
+
+            <!-- Reference(s) -->
+            <h2>References</h2>
+            <ul>
+                <li><a href="http://learn.jquery.com/">jQuery Learning Center</a></li>
+            </ul>
+        </div>
+
+        <br /><br />
+
+        
+        
+       <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="./js/unfold.js"></script>
+    </body>
+</html>

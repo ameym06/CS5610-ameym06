@@ -1,0 +1,81 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Head section : BEGIN -->
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Element Animations</title>
+
+        <!-- Style sheet information -->
+        <link rel="stylesheet" type="text/css" href="./css/profile.css" />
+        <link rel="stylesheet" type="text/css" href="./css/animator.css" />
+        <link rel="stylesheet" type="text/css" href="./css/animator2.css" />
+    </head>
+    <!-- Head section : END -->
+
+    <!-- Body section : BEGIN -->
+    <body>
+        <!-- Header section : BEGIN -->
+        <header>
+            <h1>Element Animations</h1>
+        </header>
+        <!-- Header section : END -->
+
+        <!-- Objective -->
+        <h2>Description</h2>
+        <p>
+            The jQuery animate() method has been utilized to create division and text based animations. A click on the 'Animate' button starts the sequence. First of all, the text changes, followed by a change in width, height, opacity level and text size. The animation sequence continues with a subsequent reduction in height and width respectively. This would be the final state of our division tag. Another click on the animate button starts the process over. However, the text and opacity level do not change.
+        </p>
+
+        <button class="animateBtn">Animate</button>
+        <br /><br />
+        <div class="contentBox">Black</div>
+
+        <hr />
+
+        <!-- Documentation -->
+        <h2>Documentation</h2>
+        <h3>jQuery Animations</h3>
+        <p>
+            The 'animate' method has been used to apply animation to an entire division tag. A mouse click event on 'Animate' button executes an animation sequences targeted on 'div' with class specified as 'contentBox'. The first call to animate expands contentBox's width, followed by its height. It then proceeds to change the division's opacity level and font size. Finally, the height and width are reduced to original levels. A change in text from 'Black' to 'Gray' also takes place.
+        </p>
+
+        <!-- Code section : BEGIN -->
+        <code class="code-item">
+            $(".animateBtn").click(function()<br />
+            {<br />
+            var div = $(".contentBox");<br />
+            <br />
+            div.animate({ width: "400px" }, "slow"); <br />
+            div.animate({ height: "400px" }, "slow");<br />
+            div.animate({ opacity: "0.5" }, "slow"); <br />
+            div.animate({ fontSize: "6em" }, "slow");<br />
+            div.animate({ height: "500px" }, "slow");<br />
+            div.animate({ width: "200px" }, "slow");<br />
+            div.text("Gray");<br />
+            });
+        </code>
+        <!-- Code section : END -->
+
+        <hr />
+
+        <!-- Source file(s) -->
+        <h2>Source files</h2>
+        <a href="../../fileview/Default.aspx?~/experiments/Week2/jquery-animation.html">HTML</a>
+        <a href="../../fileview/Default.aspx?~/experiments/Week2/css/animator.css">CSS</a>
+        <a href="../../fileview/Default.aspx?~/experiments/Week2/js/jquery-animate.js">JavaScript</a>
+
+        <!-- Reference(s) -->
+        <h2>References</h2>
+        <ul>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">Mozilla Developer Network</a></li>
+        </ul>
+
+        <br /><br />
+
+        <!-- Script information -->
+        <!-- Inclusion has been deferred to the end of 'body' to speed up page-load times -->
+        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="./js/jquery-animate.js"></script>
+    </body>
+</html>

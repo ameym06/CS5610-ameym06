@@ -1,0 +1,63 @@
+﻿
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>jQuery UI Autocomplete - Default functionality</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+  <script src="./js/listofstates.js"></script>
+</head>
+<body>
+ <h1>Jquery UI Autocomplete</h1>
+    <h3>Documentation:</h3>
+    <pre>
+    In this experiment, we will use JQuery UI to implement AutoComplete functionality
+    </pre>
+<div class="ui-widget">
+<p>Autocomplete text box using jQuery</p><br />
+  <label for="states">States: </label>
+  <input id="states">
+</div>
+ 
+    <div>
+        <h2>Documentation</h2>
+        <p>
+            The presented code is responsible for creating a list of US states and using JQuery UI's "autocomplete" methods to implement the autocomplete functionality
+        </p>
+
+        <code>
+            $(function () { <br />
+    var availableStates = [<br />
+"ALABAMA	AL",<br />
+"ALASKA	AK",<br />
+"ARIZONA	AZ",<br />
+"ARKANSAS	AR",<br />
+"CALIFORNIA	CA",<br />
+"COLORADO	CO",<br />
+"CONNECTICUT	CT",<br />
+"DELAWARE	DE",<br />
+"FLORIDA	FL",<br />
+"GEORGIA	GA",<br />
+"HAWAII		HI",<br />
+"IDAHO		ID",<br />
+...<br />
+"WASHINGTON	WA",<br />
+"WEST VIRGINIA	WV",<br />
+"WISCONSIN	WI",<br />
+"WYOMING	WY"];<br />
+    $("#states").autocomplete({<br />
+        source: availableStates<br />
+    });<br />
+});<br />
+        </code>
+    </div>
+
+    <br /><br /><br />References:<br />
+    <a href="http://stackoverflow.com">stackoverflow</a><br />
+    <a href="http://www.w3schools.com">w3schools</a><br /><br />
+
+    Source: <a href="../../fileview/Default.aspx?~/Experiments/Week3/jquery-autocomplete.html" target="_blank">HTML</a><br />
+</body>
+</html>

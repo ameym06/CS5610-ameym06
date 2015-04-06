@@ -1,0 +1,74 @@
+﻿
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+<div class="container">
+        <h1>Bootstrap Alerts</h1>
+        <div class="container">
+            <h3>
+                Documentation
+            </h3>
+            <pre>
+The Alerts usually provide contextual feedback messages 
+for typical user actions with the handful of available and flexible alert messages.
+Simply Wrap any text and an optional dismiss button in .alert and one of the 
+four contextual classes (e.g., .alert-success, .alert-warning, .alert-info etc.) for basic alert messages.
+</pre>
+            <div class="alert alert-info">
+                This is an alert for highlighting information.
+            </div>
+            <div class="alert alert-danger">
+                This is for alerting that you have done something seriously wrong.
+            </div>
+            <div class="alert alert-success">
+                This is for telling you, you've successfully submitted what was required.
+            </div>
+            <div class="alert alert-warning">
+                This alert warns you about something.
+            </div>
+            <div class="alert alert-danger alert-dismissable">
+                <button type="button" class="close" data-dismiss="alert"
+                        aria-hidden="true">
+                    &times;
+                </button>
+                Error ! Change some things.
+            </div>
+            <div class="alert alert-info"></div>
+        </div>
+        <script>
+            $(".alert").alert('close')
+        </script>
+    </div>
+    <div class="bottom">
+        <h3>References</h3>
+        <ul>
+            <li>
+                <a href="http://en.wikipedia.org/wiki/Bootstrap_(front-end_framework)" target="_blank">
+                    Wikipedia
+                </a>
+            </li>
+            <li>
+                <a href="http://www.w3schools.com/bootstrap/default.asp" target="_blank">
+                    W3Schools
+                </a>
+            </li>
+            <li>
+                <a href="http://getbootstrap.com/components/" target="_blank">
+                    Alerts examples
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="bottom-left">
+        <h3>View</h3>
+        <p class=" btn btn-default">
+            <a href="../../fileview/Default.aspx?~/experiments/Week5/bootstrap-alerts.html">Source Code</a>
+        </p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+﻿
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+</head>
+<body>
+   <body ng-app="">
+    <h1>Angular Object Array</h1>
+    <h3>Documentations</h3>
+    <p>
+        In this example we learn about creation of Arrays of Objects<br />
+    </p>
+        
+    <h3>Example:(Use of ng-repeat)</h3>
+    <p>
+        In this example, we will make use of the ng-repeat directives and thus print these values of the object.
+        We have created a sample JSON file of Name, City and Country list of few individuals and are querying this file
+        to retrieve the data from the file and print on the html page.
+    </p>
+    <div ng-app="" ng-controller="customersController">
+
+        <table>
+            <tr ng-repeat="x in names">
+                <td>{{ x.Name }}</td>
+                <td>{{ x.City }}</td>
+                <td>{{ x.Country }}</td>
+            </tr>
+        </table>
+
+    </div>
+
+    <script>
+        function customersController($scope, $http) {
+            $http.get("json.htm")
+            .success(function (response) { $scope.names = response; });
+        }
+    </script>
+     <h3>Source Code</h3>
+    <p>
+    <a href="../../fileview/Default.aspx?~/experiments/Week6/angular-JSON.html" target="_blank"> Source Code</a>
+    </p>
+    <h3>References</h3>
+    <p>
+        <a href="http://www.w3schools.com/angular/default.asp" target="_blank">W3Schools Tutorials - AngularJS</a>
+    </p>
+</body>
+</html>

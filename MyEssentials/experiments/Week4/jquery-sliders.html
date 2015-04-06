@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Jquery Sliders</title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <style>
+        .slider {
+            border: solid 2px black;
+        }
+        #panel_open {
+            padding: 40px;
+            display: none;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $("#slider_toggle").click(function () {
+                $("#panel_toggle").slideToggle("slow")
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Jquery Sliders</h1>
+        <h3>Documentation:</h3>
+        <pre>
+In this experiment, we use JQuery to create Sliders. We then manipulate the sliders. We toggle slide-up and slide-down on mouse click Event
+</pre>
+        <div class="container">
+            <div class="col-sm-5">
+                <div class="slider" id="slider_toggle">
+                    This is Toggled Slider.
+                </div>
+                <div class="slider" id="panel_toggle"> <br />
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's standard
+                    dummy text ever since the 1500s, when an unknown printer took a galley
+                    of type and scrambled it to make a type specimen book. It has survived
+                    not only five centuries, but also the leap into electronic typesetting,
+                    remaining essentially unchanged. It was popularised in the 1960s with the
+                    release of Letraset sheets containing Lorem Ipsum passages, and more
+                    recently with desktop publishing software like Aldus PageMaker including
+                    versions of Lorem Ipsum.
+                </div>
+            </div>
+            <div class="col-sm-7">
+                <pre>
+This slider opens and closes the panel after mouse-click event. 
+                    Try out clicking on it to see the demo...!
+</pre>
+                
+</div>
+        </div>
+    </div>
+    <h3>Source Code</h3>
+
+    <p>
+        <a href="../../fileview/Default.aspx?~/Experiments/Week4/jquery-sliders.html" target="_blank">View Source</a>
+    </p>
+    <h3>References</h3>
+    <ol>
+        <li>
+            <a href="http://www.w3schools.com/jquery/jquery_slide.asp" target="_blank">
+                W3schools
+            </a>
+        </li>
+        <li>
+            <a href="http://en.wikipedia.org/wiki/JQuery" target="_blank">
+                Jquery Wiki
+            </a>
+        </li>
+        
+    </ol>
+</body>
+</html>

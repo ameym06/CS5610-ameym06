@@ -1,0 +1,39 @@
+﻿
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Youtube API</title>
+    <script src="./jquery/js/jquery-1.11.1.min.js"></script>
+    <script src="./js/youtube_search.js"></script>
+   
+    <script src="https://apis.google.com/js/client.js?onload=onClientLoad"></script>
+    
+</head>
+<body>
+    <h2>Experiment with Youtube API</h2>
+
+    <p>
+        In this experiment, we experiment on Youtube API. We can search videos on youtube by entering the search term in the input box.
+    </p>
+    <div>
+        <input type="text" class="queryBox" placeholder="Search Videos..." />
+        <button class="goBtn">Go</button>
+    </div>
+    <div id="result" class="searchDiv"></div>    <h2>Code Documentation</h2>    <code>
+        function search(query) { <br />
+        var request;<br />
+        
+            request = gapi.client.youtube.search.list({ <br />
+                part: 'snippet', <br />
+                maxResults: 10, <br />
+                q: query <br />
+            });<br />
+        request.execute(showResponse);<br />
+    }
+    </code>    <h2>Source Code</h2>    <ul>
+        <li><a href="../../fileview/Default.aspx?~/experiments/Week8/youtube-api.html">HTML</a></li>
+        <li><a href="../../fileview/Default.aspx?~/experiments/Week8/js/youtube_search.js">JAVASCRIPT</a></li>
+    </ul>    <h2>References</h2>    <a href="https://developers.google.com/youtube/v3/code_samples/javascript">Google Youtube Data API v3</a>
+</body>
+</html>

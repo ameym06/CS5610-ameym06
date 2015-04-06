@@ -1,0 +1,53 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Eventful API</title>
+  <script src="http://api.eventful.com/js/api"></script>
+  <script src="./js/eventfulApiCreator.js"></script>
+</head>
+<body>
+<div>
+ <h2>Description</h2> 
+  <p>In this experiment, we shall be calling external web API of 'Eventful' to get the Creator/Artist of the event</p>
+</div>
+<div>
+     <h2>Demonstration</h2>
+    <h3 id="eventDetails"> Some Sample Event</h3> <br><br>
+    <input type="button" onclick="getArtist()" value="Get Artist" /> <br>
+</div>
+   <div>
+       <h2>Code Documentation</h2> 
+       <code>
+
+function getArtist() { <br />
+    var elem = document.getElementById('eventDetails'); <br />
+    var currTxt = elem.innerHTML; <br />
+
+    var oArgs = {<br />
+        app_key: &quot;QhNBcQmN6gTj3bwm&quot;,<br />
+        q: &quot;music&quot;,<br />
+        where: &quot;Boston&quot;,<br />
+        &quot;date&quot;: &quot;2014060500-2015062500&quot;,<br />
+        page_size: 5,<br />
+        sort_order: &quot;popularity&quot;,<br />
+    };<br />
+    EVDB.API.call(&quot;/events/search&quot;, oArgs, function (oData) {<br />
+    elem.innerHTML = currTxt + &quot; Creator: &quot; + oData.events.event[0].performers.performer.creator<br />
+    });<br />
+}
+       </code>
+    </div>
+    <div>
+       <h2>Source Code</h2> 
+       <a href="../../fileview/Default.aspx?~/experiments/Week8/eventArtist.html" target="_blank">HTML</a><br>
+       <a href="../../fileview/Default.aspx?~/experiments/Week8/js/eventfulApiCreator.js" target="_blank">JavaScript</a>
+    </div>
+   
+    <div>
+       <h2>References</h2> 
+        <p><a href="http://api.eventful.com/docs" target="_blank">Eventful Webpage for API Documentation</a></p>
+    </div>
+    <hr />
+</body>
+</html>

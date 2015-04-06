@@ -1,0 +1,15 @@
+﻿
+
+.flipBox
+{
+    background-color: grey;
+    color: black;
+    font-weight: bold;
+    padding: 7px;
+    width: 155px;
+}
+
+.contentBox
+{
+    display: none;
+}

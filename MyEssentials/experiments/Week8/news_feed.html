@@ -1,0 +1,59 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    
+    <script src="./jquery/js/jquery-1.11.1.min.js"></script>
+    <script src="https://www.google.com/jsapi"></script>
+    <script src="./js/newsFeed.js"></script>
+
+
+    <title>Google Feed APIs</title>
+</head>
+<body>
+    <h2>CNN World News Using Google Feed API</h2><br />
+    <p>In this experiment we use the RSS feed using Google-Feed API and display dynamic content from the "CNN World" page</p>
+    <div id="displayContent"></div>
+    <h2>Code Documentation</h2>
+    <code>
+        function loadFeed(result) {<br />
+        if (!result.error) {<br />
+        var container = document.getElementById("region");<br />
+        var html = "";<br />
+        for (var i = 0; i < result.feed.entries.length; i++) {<br />
+            var entry = result.feed.entries[i];<br />
+            var div = document.createElement("div");<br />
+            var title = entry.title;<br />
+            var description = entry.content<br />
+            var link = entry.link;<br />
+            var pubDate = entry.publishedDate;<br />
+
+            html += "<a href='" + link + "' target=_blank>";<br />
+            html += title;<br />
+            html += "</a>";<br />
+            html += "<p class='pubdate'>" + pubDate + "</p>";<br />
+            html += "<p>" + description + "</p>";<br />
+            html += "<hr />";<br />
+            div.innerHTML = html<br />
+            container.appendChild(div);<br />
+        }
+    }
+}
+    </code>
+    <h2>References</h2>
+    <ul>
+        <li>
+            <a href="../../fileview/Default.aspx?~/experiments/Week8/news_feed.html" target="_blank">HTML</a>
+        </li>
+        <li>
+            <a href="../../fileview/Default.aspx?~/experiments/Week8/js/newsFeed.js" target="_blank">JAVASCRIPT</a>
+        </li>
+    </ul>
+    <p style="font-size: 15px ; color: black"> References </p>
+        <a href="http://net4.ccs.neu.edu/home/rasala/story/index.htm?../experiments/nasa/story.txt" target="_blank" style="font-size:15px;
+             font-weight: bold">
+            NASA News at Rasala Site
+        </a>
+</body>
+</html>

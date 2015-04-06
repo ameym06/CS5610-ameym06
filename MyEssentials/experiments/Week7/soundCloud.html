@@ -1,0 +1,46 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SoundCloud</title>
+    
+    <script src="http://connect.soundcloud.com/sdk.js"></script>
+    <script src="./js/soundCloud.js"></script>
+</head>
+<body>
+
+    <h1>Using SoundCloud API</h1>
+    <p>
+        In this experiment, We use soundCloud API to get songs of some specific genres and play them on our webpage.
+    </p>
+    <div id="target">
+    <ul>
+        <li><a href="#" class="genre">dubstep</a></li>
+        <li><a href="#" class="genre">electronic</a></li>
+        <li><a href="#" class="genre">punk</a></li>
+    </ul>
+    </div>
+
+    <h2>Code Documentation</h2>
+    <code>
+
+        function playSomeSound(genre) { <br />
+    SC.get('/tracks', { <br />
+        genres: genre, <br />
+        bpm : {<br />
+            from: 100<br />
+        }<br />
+    }, function(tracks){<br />
+        var random = Math.floor(Math.random() * 49);<br />
+        SC.oEmbed(tracks[random].uri, {autoplay: true}, document.getElementById('target'));<br />
+    });<br />
+}
+    </code>
+    <h2>Source</h2>
+    <a href="../../fileview/default.aspx?~/experiments/Week7/soundCloud.html" target="_blank">Source</a>
+    <h2>References</h2>
+    <ul>
+        <li><a href="http://developers.soundcloud.com">Sound Cloud Developers website</a></li>
+    </ul>
+</body>
+</html>

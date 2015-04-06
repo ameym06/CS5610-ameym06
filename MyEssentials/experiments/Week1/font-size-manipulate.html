@@ -1,0 +1,77 @@
+<html>
+
+    <head>
+    <style>
+    body 
+    {
+        background-color: whitesmoke;
+        font-family: Calibri;
+        color: black;
+        font-size: 100%
+    }
+
+    .divisionMain
+    {
+        background-color:ghostwhite;
+        position: fixed;
+        border: double;
+        height: 700px;
+    }
+
+    para
+    {
+        font-family: 'Times New Roman';
+        color: darkgrey;
+    }
+
+    </style>
+
+    <style type="text/css">
+        .increase-icon 
+        {
+            color:black;
+            font-size: 150%;
+            cursor:pointer;
+        }
+
+        .decrease-icon 
+        {
+            color:blue;
+            font-size:100%;
+            cursor:pointer;
+        }
+
+    </style>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js" type="text/javascript" ></script>
+     <script type="text/javascript">
+         $(document).ready(function () {
+             $('#increaseFont').click(function () {
+                 var fontSize = parseInt($("body").css("font-size"));
+                 fontSize = fontSize + 1 + "px";
+                 $("body").css({ 'font-size': fontSize });
+             })
+             $('#decreaseFont').click(function () {
+                 var fontSize = parseInt($("body").css("font-size"));
+                 fontSize = fontSize - 1 + "px";
+                 $("body").css({ 'font-size': fontSize });
+             })
+         })
+	</script>
+
+
+    </head>
+
+    <body>
+
+        <div class="">
+        <div class="round-image"></div>
+        <h1>Description:</h1>
+        <p class="para"> 
+		This experiment focuses on Manipulating the fontSize of the content present on a web page. Instead of zooming in and out throught a browser, 
+            a simple click whould increase or decrease the font size. This adds to the User-Friendly nature of the web page. This experiment is done using JQuery. 
+            Specifically, the "onClick" event is used for manipulating the font size.
+		</p>
+      </div>        <h3>Click below to Change the Font Size</h3>        <span id="decreaseFont" class="decrease-icon">Aa</span>
+		<span id="increaseFont" class="increase-icon">Aa</span>
+    </body>
+</html>

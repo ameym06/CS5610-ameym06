@@ -1,0 +1,12 @@
+../story/whatisnext.htm?../experiments/			What is Next?
+story/index.htm?../Week1/      Week 1
+story/index.htm?../Week2/		Week 2
+story/index.htm?../Week3/      Week 3
+story/index.htm?../Week4/		Week 4
+story/index.htm?../Week5/      Week 5
+story/index.htm?../Week6/		Week 6
+story/index.htm?../Week7/      Week 7
+story/index.htm?../Week8/		Week 8
+story/index.htm?../Week9/      Week 9
+story/index.htm?../Week10/     Week 10
+story.txt						Story File

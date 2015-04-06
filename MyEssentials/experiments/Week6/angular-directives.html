@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+</head>
+<body>
+    <body ng-app="">
+    <h3>Documentation:</h3>
+    <h3>Example1:</h3>
+    <div>
+        In this experiment, we are going to experiment with "ng-init" directive of Angular JS.
+        We will define an "ng-init" directive to store the value of username.
+
+        This value is hard coded into the variable and printed as it is
+        <div ng-init="firstName='Smith'">
+
+            <p>The name is <span ng-bind="firstName"></span></p>
+
+        </div>
+
+    </div>
+    <h3>Example2:</h3>
+    <div ng-controller="name">
+        The same can be done by encoding the data into the "double {}" that start with "{{" <br />
+        and end with "}}"
+        In this case we need to do some additional coding for calling a script functions.
+        We do this with the use of 'ng-controller', here the controller calls the respective function and we
+        can then print the value of the variable with the '$scope'. 
+        <p>The name is: {{firstname}}</p>
+        <script>
+            function name($scope) {
+                $scope.firstname = "Smith"
+            }
+        </script>
+    </div>
+    <h3>Source Code</h3>
+    <p>
+    <a href="../../fileview/Default.aspx?~/experiments/Week6/angular-directives.html" target="_blank"> Source Code</a>
+    </p>
+    <h3>References</h3>
+    <p>
+        <a href="http://www.w3schools.com/angular/default.asp" target="_blank">W3Schools Tutorials - AngularJS</a>
+    </p>
+</body>
+</html>

@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Jquery Selectors</title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <script src="js/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Week 
+            Jquery Selectors
+        </h1>
+        <h3>
+            Documentation
+        </h3>
+        <pre>
+        <h4>jQuery Selectors</h4>
+jQuery selectors can be used to select and manipulate HTML element(s).
+The JQuery function understands if the input given is a String or a JSON Object. In this way, we could programmatically manipulate any element in the HTML DOM Structure
+The JQuery function can be called by using a dollar "$" sign.
+All selectors in jQuery start with the dollar sign and parentheses: $().
+</pre>
+        <h3>
+            Examples:
+        </h3>
+        <div class="container">
+            <h4>
+                Example 1:
+            </h4>
+
+            <script>
+                $(document).ready(function () {
+                    $("#ex1").click(function () {
+                        $(".p").hide();
+                    });
+                });
+            </script>
+            <h2>This is a heading</h2>
+            <div class="col-sm-4">
+                <p class="p">This is a paragraph.</p>
+                <p class="p">This is another paragraph.</p>
+                <button id="ex1">Hide</button>
+            </div>
+            
+            <div class="col-sm-8">
+                <pre>
+Here, we call the Jquery selector to select all the "p" tags. So, after clicking the "Hide" button, all the Paragraphs will be hidden.
+                </pre>
+            </div>
+            <br />
+        </div>
+
+        <script>
+            $(document).ready(function () {
+                $("#ex2").click(function () {
+                    $(".p1").hide();
+                });
+            });
+        </script>
+        <div class="container">
+            <h4>
+                Example 2:
+            </h4>
+
+            <h2>This is a heading</h2>
+            <div class="col-sm-4">
+                <p class="p1">This is a paragraph.</p>
+                <p class="test">This is another paragraph.</p>
+                <button id="ex2">Hide</button>
+            </div>
+            <div class="col-sm-8">
+                <pre>
+Here, we call the Jquery selector to select all tags with class "p1". The first paragraph is of class "p1". So the first paragraph should get hidden.
+We do this by calling $(".p1") command and then hiding the selected Object
+                </pre>
+            </div>
+        </div>
+        <br />
+    </div>
+    <h3>Source Code</h3>
+    <p>
+        <a href="../../fileview/Default.aspx?~/Experiments/Week3/jquery-selectors.html" target="_blank">View Source</a>
+    </p>
+    
+
+    <h3>References</h3>
+    <ol>
+        <li>
+            <a href="http://www.w3schools.com/jquery/jquery_selectors.asp" target="_blank">
+                W3schools
+            </a>
+        </li>
+        <li>
+            <a href="http://en.wikipedia.org/wiki/JQuery" target="_blank">
+                Jquery Wiki
+            </a>
+        </li>
+        
+    </ol>
+</body>
+</html>

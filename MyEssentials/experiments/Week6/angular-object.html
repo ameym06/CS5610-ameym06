@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+</head>
+<body>
+   <h1>Angular Objects</h1>
+    <h3>Documentations</h3>
+    <p>
+        In this experiment, we are going to see the creations and usage of objects in angular js.
+        Objects are just like the sturctures that are defined in the C++, or JAVA.
+        We can store variables, media, images or other objects into a single object.
+        These values than can be formulated and used in the page itself.
+    </p>
+    <h3>Example1</h3>
+    <p>
+        In this example we are just going to initialise the object "book" that has the following fields<br />
+        "Title"<br />
+        "Author"<br />
+        "Price"<br />
+        these field are initialized into the ng-init directives as follows<br />
+        ng-init="book={title:'Web Development Fundamentals', author:'Prof. Jose', price:'120'}"<br />
+        Finally we print these values using a simple "ng-bind" directives.
+
+    </p>
+    <div ng-app="" ng-init="book={title:'Web Development Fundamentals', author:'Prof. Jose', price:'120'}">
+        <p>
+            <h4>Book:</h4>
+            <ul>
+                <li>
+                    Title:
+                    <span ng-bind="book.title"></span>
+                </li>
+                <li>
+                    Author:
+                    <span ng-bind="book.author"></span>
+                </li>
+                <li>
+                    Price:
+                    <span ng-bind="book.price"></span>
+                </li>
+            </ul>
+        </p>
+       
+    </div>
+    <h3>Example 2:(Using Controller)</h3>
+    <div ng-app="" ng-controller="bookController">
+
+        Title: <input type="text" ng-model="book.title"><br>
+        Author: <input type="text" ng-model="book.author"><br>
+        Price: <input type="text" ng-model="book.price"><br>
+        <br>
+        Book: {{book.fullInfo()}}
+
+    </div>
+
+    <script>
+        function bookController($scope) {
+            $scope.book = {
+                title: "Web Development Fundamental",
+                author: "Professor Jose",
+                price: "120",
+                fullInfo: function () {
+                    var x;
+                    x = $scope.book;
+                    return "Title: " + x.title + " Author:" + x.author + " Price: $" + x.price;
+                }
+            };
+        }
+    </script>
+    <h3>Source Code</h3>
+    <p>
+    <a href="../../fileview/Default.aspx?~/experiments/Week6/angular-object.html" target="_blank"> Source Code</a>
+    </p>
+    <h3>References</h3>
+    <ul>
+        <li>
+            <a href="http://www.w3schools.com/angular/angular_directives.asp" target="_blank"> W3Schools Angular Directives Example </a>
+        </li>
+        <li>
+
+            <a href="http://www.w3schools.com/angular/angular_controllers.asp" target="_blank"> W3Schools Angular Controller Example </a>
+
+        </li>
+   </ul>
+</body>
+</html>

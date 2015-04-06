@@ -1,0 +1,44 @@
+﻿
+<html>
+<head>
+    <title>GET Requests jQuery</title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <link rel="stylesheet" href="./css/jquery_ajax.css" />
+    <script src="./js/jqueryGet.js"></script>
+    <style>
+    .maindiv
+    {
+        height: 100px;
+        width: 100px;
+        margin: 20px;
+        background-color: red;
+        opacity: 0.6;
+    }
+    </style>
+</head>
+<body>
+
+    <h1>Requests to API using jQuery</h1>
+    <br><br>
+
+    jQuery's $.getJSON is a shorthand for AJAX and is used to acheieve GET requests. In this experiment, a GET request is made to the Guardian's API with the search term as "Lionel Messi"<br><br>
+    <div class="showdiv" id="div1"></div>
+
+    <h2> Documentation </h2>
+    <code class="asCode">
+        $.getJSON(url, { format: "json" }).done(function (data) { <br />
+        $.each(data.response.results, function (i, doc) { <br />
+      
+    </code>
+
+    <br /><br /><br />References:<br />
+    <a href="http://stackoverflow.com">stackoverflow</a><br />
+    <a href="http://www.w3schools.com">w3schools</a><br /><br />
+
+    Source: <a href="../fileview/Default.aspx?~/experiments/Week4/jquery_ajax.html" target="_blank">HTML</a><br />
+
+
+
+
+</body>
+</html>

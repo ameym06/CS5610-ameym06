@@ -1,0 +1,85 @@
+﻿
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <script src="./js/controller.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Bootstrap with AngularJS</h1>
+        <h3>
+            Documentation
+        </h3>
+
+        <pre>
+In this experiment we are going to use the
+CSS from the bootstrap and the directives from
+the Angular js to create, update and delete the
+table entries on the webpage.
+</pre>
+        
+    <div class="container" ng-controller="rawMaterialLibraryController">
+        <h1>rawMaterial Library</h1>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Amount</th>
+                    <th>&nbsp;</th>
+                </tr>
+                <tr>
+                    <td><input class="form-control" ng-model="newrawMaterial.Product" placeholder="Product" /></td>
+                    <td><input class="form-control" ng-model="newrawMaterial.Quantity" placeholder="Quantity" /></td>
+                    <td><input class="form-control" ng-model="newrawMaterial.Amount" placeholder="Amount" /></td>
+                    <td>
+                        <button ng-click="add()" class="btn btn-success">Add</button>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="rawMaterial in rawMaterials">
+                    <td>{{rawMaterial.Product}}</td>
+                    <td>{{rawMaterial.Quantity}}</td>
+                    <td>{{rawMaterial.Amount}}</td>
+                    <td>
+                        <button class="btn btn-danger" ng-click="delete(rawMaterial)">Delete</button>
+                        <button class="btn btn-warning" ng-click="select(rawMaterial)">Select</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+    
+        <div class="bottom">
+            <h3>References <small>oh yes you can find them here!!</small></h3>
+            <ul>
+                <li>
+                    <a href="http://en.wikipedia.org/wiki/Bootstrap_(front-end_framework)" target="_blank">
+                        Wikipedia
+                    </a>
+                </li>
+                <li>
+                    <a href="http://www.w3schools.com/bootstrap/default.asp" target="_blank">
+                        W3Schools
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="bottom-left">
+            <h3>View</h3>
+            
+            <p class=" btn btn-default">
+                <a href="../../fileview/Default.aspx?~/experiments/Week7/bootstrap-angular-js.html">Source Code</a>
+            </p>
+            <p class=" btn btn-default">
+                <a href="../../fileview/Default.aspx?~/experiments/Week7/js/controller.js">Controller Source Code</a>
+            </p>
+        </div>
+</body>
+</html>

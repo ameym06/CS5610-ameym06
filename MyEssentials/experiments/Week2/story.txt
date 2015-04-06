@@ -1,0 +1,5 @@
+bouncingBall.html				Bouncing Ball
+digital_clock.html				Digital Clock
+jquery-events.html 				Using Mouse Events with JQuery
+jquery-animation.html			Animation in JQuery
+responsivee-design.html			Responsive Web Design

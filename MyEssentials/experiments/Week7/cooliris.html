@@ -1,0 +1,46 @@
+﻿<!doctype html>
+<html>
+    <head>
+        <script src="//ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
+        <script src="./jquery/js/jquery-1.11.1.min.js"></script>
+        <script src="./js/cooliris-embed.js"></script>
+        <script src="./js/cooliris.js"></script>
+
+        <link href="./css/cooliris.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <h2>Experimenting of CoolIris Embed</h2>
+        Click a link to load an example:
+        <ul>
+            <li><a href="#" onclick="setFeedUrl('api://www.flickr.com/?user=flickr')">Flickr Photostream</a> </li>
+            <li><a href="#" onclick="setFeedUrl('api://www.flickr.com/?user=flickr&amp;album=72157641288898144')">Flickr Photoset</a> </li>
+            <li><a href="#" onclick="setFeedUrl('api://www.youtube.com/?user=YouTube')">YouTube Channel</a></li>
+        </ul>
+        <div id="wall" class="div-element" ></div>
+
+
+        <h2>Documentation</h2>
+        <p>
+            In this experiment, we experiment on Cooliris Javasript API to embed their Flash App into our webpage. This displays the images and videos in a very interactive fashion
+        </p>
+
+        <h2>Source Documentation</h2>
+        <code>
+            function embedWall(replaceElementId, feedUrl, width, height, useScripting) { <br />
+            swfobject.embedSWF(EMBED_WALL_URL,<br />
+                       replaceElementId,  // The ID of the HTML element to replace with the Embed Wall.<br />
+                       width,             // Width of the Flash content.<br />
+                       height,            // Height of the Flash content.<br />
+                       '9.0.0',           // Minimum supported version of Flash.<br />
+                       '',<br />
+                       { feed: feedUrl },<br />
+                       { AllowFullScreen: 'true', AllowScriptAccess: useScripting ? 'always' : 'never' });<br />
+            }<br />
+        </code>
+
+        <h2>References</h2>
+        <ul>
+            <li><a href="https://github.com/cooliris/embed-wall">CoolIris GitHub</a></li>
+        </ul>
+</body>
+</html>
