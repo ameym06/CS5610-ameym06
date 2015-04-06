@@ -1,0 +1,26 @@
+﻿.resultEntryPara {
+    font-family: Verdana;
+    font-size: large;
+    float: left;
+    margin: 1em;
+    color: ghostwhite;
+}
+
+.resultEntry {
+    margin: 1em;
+    width: 50%;
+    display: inline-block;
+    padding: 1em;
+    border-bottom: 2px solid dashed;
+}
+
+
+.topList {
+    color: black;
+}
+
+.scrollable {
+    height:600px;
+    overflow-y:scroll;
+}
+

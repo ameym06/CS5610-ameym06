@@ -1,0 +1,46 @@
+﻿
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Get Top Tracks</title>
+    <script src="./js/jquery-1.11.1.min.js"></script>
+    <script src="./js/top_tracks.js"></script>
+    <link href="./css/topTracks.css" rel="stylesheet" />
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src="https://apis.google.com/js/client.js?onload=onClientLoad"></script>
+    
+</head>
+<body>
+    <h2>Experiment with finding Top Tracks</h2>
+
+    <p>
+        In this experiment, we find the Top Tracks using the Last.FM API
+    </p>
+    <div>
+        <button class="goBtn">Find Top Tracks</button>
+    </div>
+    <div id="results" class="searchDiv">
+        
+    </div>    <h2>Code Documentation</h2>    <code>
+        function getTopTracks() {<br />
+    $.ajax({<br />
+        url: &quot;http://ws.audioscrobbler.com/2.0/&quot;, <br />
+        data: {<br />
+            &quot;method&quot;: &quot;chart.gettoptracks&quot;,<br />
+            &quot;api_key&quot;: &quot;e0531d271ba5cf86a8fa53ff95ee2e48&quot;,<br />
+            &quot;format&quot;: &quot;json&quot;<br />
+        },<br />
+        dataType: &quot;json&quot;,<br />
+        success: function (response) {<br />
+            displayList(response);<br />
+        }
+    });
+}
+    }
+    </code>    <h2>Source Code</h2>    <ul>
+        <li><a href="../../fileview/Default.aspx?~/experiments/Week9/top-tracks.html">HTML</a></li>
+        <li><a href="../../fileview/Default.aspx?~/experiments/Week9/js/top_tracks.js">JAVASCRIPT</a></li>
+    </ul>    <h2>References</h2>    <a href="http://www.last.fm/api">Last.FM API</a>
+</body>
+</html>
