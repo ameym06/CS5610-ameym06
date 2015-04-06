@@ -1,0 +1,8 @@
+﻿.scrollable {
+    height:600px;
+    overflow-y:scroll;
+}
+
+#result {
+    height:250px;
+}

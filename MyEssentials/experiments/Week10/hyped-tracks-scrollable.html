@@ -1,0 +1,44 @@
+﻿
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Get Hyped Tracks</title>
+    <script src="./js/jquery-1.11.1.min.js"></script>
+    <script src="./js/hyped_tracks.js"></script>
+    <link href="./css/topTracks.css" rel="stylesheet" />
+    
+</head>
+<body>
+    <h2>Experiment with finding Hyped Tracks</h2>
+
+    <p>
+        In this experiment, we continue on to find the Hyped Tracks using the Last.FM API. In addition to this, we create a scrollbar for overflow-control
+    </p>
+    <div>
+        <button class="goBtn">Find Hyped Tracks</button>
+    </div>
+    <div id="results" class="searchDiv scrollable">
+        
+    </div>    <h2>Code Documentation</h2>    <code>
+        function getTopTracks() {<br />
+    $.ajax({<br />
+        url: &quot;http://ws.audioscrobbler.com/2.0/&quot;, <br />
+        data: {<br />
+            &quot;method&quot;: &quot;chart.gettoptracks&quot;,<br />
+            &quot;api_key&quot;: &quot;e0531d271ba5cf86a8fa53ff95ee2e48&quot;,<br />
+            &quot;format&quot;: &quot;json&quot;<br />
+        },<br />
+        dataType: &quot;json&quot;,<br />
+        success: function (response) {<br />
+            displayList(response);<br />
+        }
+    });
+}
+    }
+    </code>    <h2>Source Code</h2>    <ul>
+        <li><a href="../../fileview/Default.aspx?~/experiments/Week10/hyped-tracks-scrollable.html">HTML</a></li>
+        <li><a href="../../fileview/Default.aspx?~/experiments/Week10/js/hyped_tracks.js">JAVASCRIPT</a></li>
+    </ul>    <h2>References</h2>    <a href="http://www.last.fm/api">Last.FM API</a>
+</body>
+</html>

@@ -1,0 +1,26 @@
+﻿.displayVideo {
+    padding-left:50px;
+  width:50%;
+    
+}
+
+.right {
+    position: absolute;
+    right:0px;
+}
+
+.left {
+    position: absolute;
+    left:0px;
+}
+
+.displaySong {
+    padding-right:50px;
+    margin-left:50%;
+}
+
+.scrollable {
+    height:600px;
+    overflow-y:scroll;
+}
+

@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Sound Cloud Song Search</title>
+    <link href="./css/bootstrap.css" rel="stylesheet" />
+    <script src="https://connect.soundcloud.com/sdk.js"></script>
+    <link href="./css/youtube_soundCloud.css" rel="stylesheet"/>
+    <script src="./js/jquery-1.11.1.min.js"></script>
+    <script src="./js/retrieveAll.js"></script>
+    <script src="https://apis.google.com/js/client.js?onload=onClientLoad"></script>
+    
+</head>
+<body>
+    <div class="container-fluid">
+        <h1>Search Songs on SoundCloud and Youtube Simultaneously</h1>
+        <h2>Description</h2>
+        <p>
+            In this experiment, we shall use the sound cloud API and Youtube API together to search songs
+
+        </p>
+        <div class="input-grp">
+            <input id="searchTerm" type ="text" class="form-control " placeholder="Search an Artist..."/>
+                <span class="input-group-btn">
+                    <button id="search" class="btn btn-default">Go!</button>
+                </span> 
+        </div>
+        <div>
+    <h2> Code Documentation</h2>
+    <code>
+        
+    function embedAllSongs(tracks) { <br />
+        $("#result").empty();<br />
+        for (; count < limit; count++) {<br />
+            embedThisSong(tracks[count].uri);<br />
+        }<br />
+    }<br /><br />
+
+    function embedThisSong(track) {<br />
+        SC.oEmbed(track, { auto_play: false }, function (returnObject) {<br />
+            $("#result").append("<div class=\"container\" style=\"display: inline-block; width: 100%;\">"
+                + "<div><p>" + returnObject.title + "</p></div><p>Listen</p>" + resizeFrame(returnObject.html) + "</div>");
+        });<br />
+    }<br /><br />
+
+        function getVideos() { <br />
+        var query = $("#searchTerm").val();<br />
+        var request;<br />
+        
+        request = gapi.client.youtube.search.list({<br />
+            part: 'snippet',<br />
+            maxResults: 20,<br />
+            q: query<br />
+        });<br />
+        request.execute(showResponse);<br />
+    }<br />
+
+    </code>
+    <h2>Source Code</h2>
+    <a href="../../fileview/default.aspx?~/experiments/Week10/youtube_soundCloud.html" target="_blank"">Source</a>
+    <h2>References</h2>
+    <ul>
+        <li><a href="http://developers.soundcloud.com">SoundCloud Documentation</a></li>
+        <li><a href="https://developers.google.com/youtube/v3/code_samples/javascript">Google Youtube API v3</a></li>
+    </ul>
+   </div>
+
+        <div id="result1" class="displayVideo left">
+
+        </div>
+        <div id="result2" class="displaySong right">
+
+        </div>
+
+
+    </div>
+    
+</body>
+</html>
