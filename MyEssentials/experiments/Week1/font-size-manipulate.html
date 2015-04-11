@@ -72,6 +72,20 @@
             Specifically, the "onClick" event is used for manipulating the font size.
 		</p>
       </div>        <h3>Click below to Change the Font Size</h3>        <span id="decreaseFont" class="decrease-icon">Aa</span>
-		<span id="increaseFont" class="increase-icon">Aa</span>
+		<span id="increaseFont" class="increase-icon">Aa</span>        <h2>Code Documentation:</h2>        <code>
+            $(document).ready(function () { <br />
+             $('#increaseFont').click(function () {<br />
+                 var fontSize = parseInt($("body").css("font-size"));<br />
+                 fontSize = fontSize + 1 + "px";<br />
+                 $("body").css({ 'font-size': fontSize });<br />
+             })<br />
+             $('#decreaseFont').click(function () {<br />
+                 var fontSize = parseInt($("body").css("font-size"));<br />
+                 fontSize = fontSize - 1 + "px";<br />
+                 $("body").css({ 'font-size': fontSize });<br />
+             })<br />
+         })<br />
+
+        </code>        <h2>Source Code</h2>       <a href="../fileview/Default.aspx?~/experiments/Week1/font-size-manipulate.html" target="_blank">HTML</a><br />        <h2>References</h2>        <a href="www.w3schools.com">W3Schools</a><br />
     </body>
 </html>

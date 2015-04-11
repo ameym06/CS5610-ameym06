@@ -58,6 +58,19 @@ The Script, in turn controls the dimensions of the box.
             $("div").css("padding", padding);
         }
     </script>
+    <h2>Code Documentation</h2>
+    <code>
+        function main() {<br />
+            $("div").css("background-color", "red");<br />
+            $("input#padding").click(updatePadding);<br />
+        }<br />
+        <br />
+        function updatePadding() {<br />
+            var padding = $("input#padding").val();<br />
+            console.log(padding);<br />
+            $("div").css("padding", padding);<br />
+        }<br />
+    </code>
     <h3>Source Code</h3>
     
     <p>

@@ -12,7 +12,7 @@
     <canvas id="bounce_canvas"></canvas>
     <br />
 
-    <script src="./jquery/js/jquery-1.11.1.min.js"></script>
+    <script src="./js/jquery-1.11.1.min.js"></script>
     <script src="./js/bounce.js"></script>
 
     <h2>Description</h2>
@@ -21,7 +21,25 @@
         This experiment is implemented using Canvas Graphics.<br />
     </p>
 
-
+    <h2>Code Documentation</h2>
+    <code>
+        unction animate() {<br />
+    var canvas = $('#bounce_canvas')[0];<br />
+    var ctx = canvas.getContext("2d");<br />
+    ctx.clearRect(0, 0, width * 2, height * 2);<br />
+    $('#canvas-height').html(height);<br />
+    $('#canvas-width').html(width);<br />
+    ctx.beginPath();<br />
+    ctx.fillStyle = "black";<br />
+    ctx.arc(ballwidth, ballheight, 10, 0, Math.PI * 2, true);<br />
+    ctx.closePath();<br />
+    ctx.fill();<br />
+    if (ballwidth < 0 || ballwidth > width) x_step = -x_step;<br />
+    if (ballheight < 0 || ballheight > height) y_step = -y_step;<br />
+    ballwidth += x_step;<br />
+    ballheight += y_step;<br />
+}<br />
+    </code>
     <h2>Source Code</h2>
         <a href="../../fileview/Default.aspx?~/experiments/Week2/bouncingBall.html" target="_blank">HTML</a><br />
         <a href="../../fileview/Default.aspx?~/experiments/Week2/js/bounce.js" target="_blank">JAVASCRIPT</a><br />

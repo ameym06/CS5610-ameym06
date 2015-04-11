@@ -48,7 +48,17 @@ The experiment besides, uses mouse double-click event to hide the text
 </pre>
         </div>
     </div>
-    
+    <h2>Code Documentation</h2>
+    <code>
+        $(document).ready(function () {<br />
+            $(".singleClick").click(function () {<br />
+                $(this).hide();<br />
+            });<br />
+            $(".doubleClick").dblclick(function () {<br />
+                $(this).hide();<br />
+            });<br />
+    });<br />
+    </code>
     <h3>Source Code</h3>
     <p>
         <a href="../../fileview/Default.aspx?~/Experiments/Week2/jquery-events.html" target="_blank">View Source</a>

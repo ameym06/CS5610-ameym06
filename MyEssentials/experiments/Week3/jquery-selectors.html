@@ -14,7 +14,7 @@
             Documentation
         </h3>
         <pre>
-        <h4>jQuery Selectors</h4>
+        <h2>jQuery Selectors</h2>
 jQuery selectors can be used to select and manipulate HTML element(s).
 The JQuery function understands if the input given is a String or a JSON Object. In this way, we could programmatically manipulate any element in the HTML DOM Structure
 The JQuery function can be called by using a dollar "$" sign.
@@ -49,7 +49,14 @@ Here, we call the Jquery selector to select all the "p" tags. So, after clicking
             </div>
             <br />
         </div>
-
+        <h2>Code Documentation</h2>
+        <code>
+        $(document).ready(function () {<br />
+                $("#ex2").click(function () {<br />
+                    $(".p1").hide();<br />
+                });<br />
+            });<br />
+        </code>
         <script>
             $(document).ready(function () {
                 $("#ex2").click(function () {

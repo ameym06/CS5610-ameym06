@@ -1,0 +1,51 @@
+﻿
+body
+{
+	font-family: "Arial";
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+
+li
+{
+    float: left;
+}
+
+ul
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+
+.nav-item:hover, .nav-item:active
+{
+	color: black;
+    background-color: #99CCFF;
+}
+
+.owner
+{
+	font-weight: bold;
+}
+
+.nav-item:link, .nav-item:visited
+{
+    display: block;
+    width: 350px;
+    color: #FFFFFF;
+    background-color: #6699FF;
+    text-align: center;
+    padding: 4px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.code-item
+{
+    color: crimson;
+    font-family: "Courier New";
+}

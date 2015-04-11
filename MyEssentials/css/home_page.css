@@ -1,0 +1,162 @@
+﻿
+.pageBody
+{
+    background-image: url("../images/back.jpg");
+    background-size: cover;
+    max-width: 100%;
+    overflow-x: hidden;
+    font-family:Verdana;
+}
+
+.navigate
+{   
+    background-color: #E6E6E6;
+    border-bottom: 1px solid #ccc; 
+    border-top: 1px solid #ccc;
+    margin:0;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    text-align: center;
+}
+
+.bottom {
+    bottom:0px;
+}
+.navigate li
+{
+    display: inline-block;
+    padding: 0 0.5%;
+}
+
+.navigate li a
+{
+    color: black;
+    text-decoration: none;
+}
+
+.navigate li a:hover
+{
+    color: gray;
+}
+
+.google-sans-serif-bold {
+
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.google-san-serif {
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size:20px;
+}
+
+
+
+.introduction {
+    
+    margin-left:200px;
+    margin-right:200px;
+    font-family:Calibri;
+    font-weight:bolder;    
+    opacity:0.9;   
+    color:ghostwhite; 
+    vertical-align: middle;
+    padding:10px;
+}
+
+
+p
+{
+    text-align: justify;
+}
+
+
+.introduction p {
+    padding: 35px 0 0;
+}
+
+.right {
+    position: absolute;
+    right: 100px;
+    width: 600px;
+}
+
+.center {
+    text-align:center;
+}
+
+.dp {
+    border: 2px groove;
+    border-radius: 5px;
+    float: left;
+    margin-right: 20px;
+    width: 180px;
+    height: 180px;
+}
+
+.name {
+    font-size: 75px;
+    line-height: 60px;
+    font-weight: bolder;
+    text-align:center;
+}
+
+.footerStyle {
+    color:white;
+    vertical-align:bottom;
+
+}
+
+.projectAndExp {
+    position:absolute;
+    margin-top: 50%;
+}
+
+.footerClass {
+    background-color:black;
+    width:100%;
+    margin-top:57%;
+    padding-bottom:10px;
+    text-align:center;
+    opacity:0.5;
+
+}
+
+.displayImage {
+    height:40px;
+    padding-right:10px;
+    display:inline-grid;
+    margin-left:50px;
+
+}
+
+
+
+.responsive {
+    float: left;
+    
+}
+
+body
+{
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.icons
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align:center;
+}
+ 
+.icons li
+{
+    display: inline-block;
+    height: 150px;
+    margin: 0 1em 1em 0;
+    padding-right: 50px;
+    position: relative;
+    width: 150px;
+}

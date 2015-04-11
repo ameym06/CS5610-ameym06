@@ -67,11 +67,32 @@
   <body>
        <h1>Google Maps Geolocation</h1>
     <h3>Documentation:</h3>
-    <pre>
+    <p>
 In this experiment, we will use Google Maps API to track latitude and longitute. In additon, we will include google Location Marker
-    </pre>
+    </p>
     <button id="trackMe" onclick="showPosition()">Track Me Now</button>
     <div id="map-canvas"></div>
+    <h2>Code Documentation:</h2>
+      <code>
+          function setMapCenter(position) { <br />
+
+            var lat = position.coords.latitude;<br />
+            var long = position.coords.longitude;<br />
+            var latlng = new google.maps.LatLng(lat, long)<br />
+            var mapOptions = {<br />
+                zoom: 15,<br />
+                center: new google.maps.LatLng(lat, long)<br />
+            };<br />
+            map = new google.maps.Map(document.getElementById('map-canvas'),<br />
+                mapOptions)<br />
+            myMarker = new google.maps.Marker({<br />
+                position: latlng,<br />
+                map: map,<br />
+                icon: image<br />
+            });<br />
+            
+        }<br />
+      </code>
     <h3>References</h3>
       <ol>
           <li>

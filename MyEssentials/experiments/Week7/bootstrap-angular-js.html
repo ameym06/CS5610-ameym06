@@ -71,6 +71,35 @@ table entries on the webpage.
                 </li>
             </ul>
         </div>
+        <h2>Code Documentation</h2>
+        <code>
+    function rawMaterialLibraryController($scope) {<br />
+    var rawMaterial1 = {<br />
+        Product: "Paper",<br />
+        Quantity: "30 tons",<br />
+        Amount: "30",<br />
+    };<br />
+    var rawMaterial2 = {<br />
+        Product: "Partitions",<br />
+        Quantity: "2000",<br />
+        Amount: "12",<br />
+    };<br />
+    var rawMaterial3 = {<br />
+        Product: "Gum",<br />
+        Quantity: "232",<br />
+        Amount: "232",<br />
+    };<br />
+            <br /><br />
+    $scope.add = function () {<br />
+        console.log($scope.newrawMaterial);<br />
+        var rawMaterial = {<br />
+            Product: $scope.newrawMaterial.Product,<br />
+            Quantity: $scope.newrawMaterial.Quantity,<br />
+            Amount: $scope.newrawMaterial.Amount<br />
+        };<br />
+        $scope.rawMaterials.push(rawMaterial);<br />
+    }<br />
+        </code>
         <div class="bottom-left">
             <h3>View</h3>
             

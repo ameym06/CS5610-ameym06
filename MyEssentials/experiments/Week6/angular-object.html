@@ -69,6 +69,21 @@
             };
         }
     </script>
+    <h2>Code Documentation</h2>
+    <code>
+          function bookController($scope) {<br />
+            $scope.book = {<br />
+                title: "Web Development Fundamental",<br />
+                author: "Professor Jose",<br />
+                price: "120",<br />
+                fullInfo: function () {<br />
+                    var x;<br />
+                    x = $scope.book;<br />
+                    return "Title: " + x.title + " Author:" + x.author + " Price: $" + x.price;<br />
+                }<br />
+            };<br />
+        }<br />
+    </code>
     <h3>Source Code</h3>
     <p>
     <a href="../../fileview/Default.aspx?~/experiments/Week6/angular-object.html" target="_blank"> Source Code</a>
