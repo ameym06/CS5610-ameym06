@@ -1,0 +1,46 @@
+﻿.specialElite{
+	font-family: 'Special Elite', cursive;
+	font-size: 40px;	
+}
+
+.fredericka{
+	font-family: 'Fredericka the Great', cursive;
+}
+
+.philosopher{
+	font-family: 'Philosopher', sans-serif;
+	font-size:20px;
+	font-color:'white'
+}
+
+.novaMono{
+	font-family: 'Nova Mono', ;
+}
+
+.banner{
+	max-height: 400px;
+	padding: 5px;
+	padding-bottom:5px;
+}
+
+.lessPadding{
+	padding-top: 75px;
+	padding-bottom: 30px;
+}
+
+.timelineGray{
+	background-color:light-gray;
+}
+.rescaled{
+	margin: 0 auto;
+	width:250px;
+	height:auto;
+}
+
+.grayBackground{
+	background-color:#FFFAF0;
+}
+
+.smaller{
+	font-size: 30px;
+}
