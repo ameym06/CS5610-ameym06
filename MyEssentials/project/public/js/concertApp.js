@@ -87,10 +87,15 @@
     
     //Logout function
     $scope.logout = function () {
-        $cookieStore.remove('access_token');
-        $cookieStore.remove('uid');
-        $scope.access_token = $cookieStore.get('access_token');
-        $location.path('/');
+        $http.post("/api/logout")
+        .success(function(){
+            $cookieStore.remove('access_token');
+            $cookieStore.remove('uid');
+            $scope.access_token = $cookieStore.get('access_token');
+            $location.url($location.path('/'));
+            $location.path('/');
+        });
+        
     };
     
     //Signup function

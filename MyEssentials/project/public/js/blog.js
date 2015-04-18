@@ -31,8 +31,6 @@
 			blog.content=$scope.content;
 			blog.username=uid;
 			blog.date = new Date();
-			console.log(blog);
-			console.log(uid);
 			$http.post("/api/blog/", blog)
 			.success(function(res){
 				if(res.returnCode==0){
@@ -65,10 +63,15 @@
     
     //Logout function
     $scope.logout = function () {
-        $cookieStore.remove('access_token');
-        $cookieStore.remove('uid');
-        $scope.access_token = $cookieStore.get('access_token');
-        $location.path('/');
+        $http.post("/api/logout")
+        .success(function(){
+            $cookieStore.remove('access_token');
+            $cookieStore.remove('uid');
+            $scope.access_token = $cookieStore.get('access_token');
+            $location.url($location.path('/'));
+            $location.path('/');
+        });
+        
     };
 
     //Signup function

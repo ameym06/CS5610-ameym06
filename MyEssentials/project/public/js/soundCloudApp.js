@@ -1,6 +1,6 @@
 ﻿//soundCloudController
 
-app.controller("soundCloudController", function ($q, $scope, $location, $cookieStore, $modal) {
+app.controller("soundCloudController", function ($q, $scope, $location, $cookieStore, $modal, $http) {
 	$scope.access_token = $cookieStore.get('access_token');
     
     $scope.goToHome = function () {
@@ -41,9 +41,9 @@ app.controller("soundCloudController", function ($q, $scope, $location, $cookieS
        
         SC.oEmbed(url, { auto_play: false }, function (track) {
             deferred.resolve();
-            console.log("%c   [echo] Title: " + track.title,
+            console.log("Title: " + track.title,
                         "font-family: Courier New;");
-            console.log("%c   [echo] URI: " + url,
+            console.log("URI: " + url,
                         "font-family: Courier New;");
             music = music.concat(toHTML(track, url)) + "<br/>";
             document.getElementById("musicResults").innerHTML = music;
@@ -79,12 +79,17 @@ app.controller("soundCloudController", function ($q, $scope, $location, $cookieS
         
     };
     
-    //Logout function
+    ///Logout function
     $scope.logout = function () {
-        $cookieStore.remove('access_token');
-        $cookieStore.remove('uid');
-        $scope.access_token = $cookieStore.get('access_token');
-        $location.path('/');
+        $http.post("/api/logout")
+        .success(function(){
+            $cookieStore.remove('access_token');
+            $cookieStore.remove('uid');
+            $scope.access_token = $cookieStore.get('access_token');
+            $location.url($location.path('/'));
+            $location.path('/');
+        });
+        
     };
 
     //Signup function

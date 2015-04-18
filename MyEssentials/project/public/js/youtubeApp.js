@@ -27,7 +27,6 @@ app.controller("youtubeAppController", function ($scope, $http, $location, $cook
              "&part=snippet&maxResults=15&key=AIzaSyCK7mxfcBKsGoqKrfmKgaZ2f4udDNaZIak")
              .success(function (res, status) {
                  var len = res.length < 15 ? res.length : 15;
-                 console.log(res);
                  for (var i = 0; i < len; i++)
                      $scope.embed(res.items[i]);
              });
@@ -71,10 +70,15 @@ app.controller("youtubeAppController", function ($scope, $http, $location, $cook
     
     //Logout function
     $scope.logout = function () {
-        $cookieStore.remove('access_token');
-        $cookieStore.remove('uid');
-        $scope.access_token = $cookieStore.get('access_token');
-        $location.path('/');
+        $http.post("/api/logout")
+        .success(function(){
+            $cookieStore.remove('access_token');
+            $cookieStore.remove('uid');
+            $scope.access_token = $cookieStore.get('access_token');
+            $location.url($location.path('/'));
+            $location.path('/');
+        });
+        
     };
 
     //Signup function

@@ -107,6 +107,7 @@ var auth = function(req, res, next)
 
 //POST requests begin
 
+//Login
 app.post("/api/login", passport.authenticate("local"), function(req, res)
 {	
 	
@@ -115,6 +116,7 @@ app.post("/api/login", passport.authenticate("local"), function(req, res)
     
 });
 
+//Signup
 app.post("/api/signup", function(req, res) {
 	var newUser = req.body;
     UserModel.findOne({username: newUser.username}, function(err, user) {
@@ -130,6 +132,14 @@ app.post("/api/signup", function(req, res) {
     	
 });
 
+//Logout
+app.post("/api/logout", function(req, res)
+{
+    req.logOut();
+    res.send(200);
+});
+
+//Post Blogs
 app.post("/api/blog/", function(req, res){
 	var newBlog = new BlogModel(req.body);
 	newBlog.save();
@@ -141,7 +151,7 @@ app.post("/api/blog/", function(req, res){
 
 //GET requests begin
 
-app.get("/api/profile/:uid",function(req,res){
+app.get("/api/profile/:uid",auth, function(req,res){
 	var uid = req.params.uid;
 	BlogModel.find({username: uid}, function(err, docs){
 		console.log(docs);

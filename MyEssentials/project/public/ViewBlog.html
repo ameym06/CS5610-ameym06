@@ -39,7 +39,7 @@
 
 <!-- Page Header -->
     <header class="intro-header" style="background-image: url('images/home-bg.jpg')">
-        <div class="container">
+        <div class="container" ng-show="access_token">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="post-heading">
@@ -50,10 +50,12 @@
             </div>
         </div>
     </header>
-    
+<p class="alert alert-info alert-dismissable text-center" ng-hide="access_token">
+    You are not Authorized to View the Content on this Page
+   </p>
  <!-- Post Content -->
     <article>
-        <div class="container">
+        <div class="container" ng-show="access_token">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 	<p>{{content}}</p>
@@ -61,3 +63,5 @@
             </div>
         </div>
      </article>
+
+ 

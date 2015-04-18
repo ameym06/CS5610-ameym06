@@ -52,8 +52,10 @@
         </div>
     </header>
 <div class="container">
-
-<div class="well">
+<p class="alert alert-info alert-dismissable text-center" ng-hide="access_token">
+    You are not Authorized to View the Content on this Page
+   </p>
+<div class="well" ng-show="access_token">
 <div class="row" style="padding-top:20px; padding-bottom: 30px">
     <div class="col-lg-12">
         <div class="row">

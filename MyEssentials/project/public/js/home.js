@@ -1,5 +1,5 @@
 ﻿app.controller("homeController",
-    function ($scope, $location, $modal, $cookieStore, $anchorScroll) {
+    function ($scope, $location, $modal, $cookieStore, $anchorScroll, $http) {
 		$scope.access_token = $cookieStore.get('access_token');
         
         //Page Scrolling functionality
@@ -49,12 +49,17 @@
         };
        
 
-        /*Logout function*/
+        //Logout function
         $scope.logout = function () {
-            $cookieStore.remove('access_token');
-            $cookieStore.remove('uid');
-            $scope.access_token = $cookieStore.get('access_token');
-            $location.url($location.path('/'));
+            $http.post("/api/logout")
+            .success(function(){
+                $cookieStore.remove('access_token');
+                $cookieStore.remove('uid');
+                $scope.access_token = $cookieStore.get('access_token');
+                $location.url($location.path('/'));
+                $location.path('/');
+            });
+            
         };
 
         /*Signup click - Redirect to signup page*/
