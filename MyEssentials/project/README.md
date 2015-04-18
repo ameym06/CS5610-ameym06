@@ -4,3 +4,5 @@ Both, guest and registered users can listen to music, watch youtube videos, find
 The registered Users get the priviledge of writing blogs and viewing their blogs anytime they want. 
 
 Please visit: http://soundbytes-openshifteramey6.rhcloud.com/ to give it a try!
+
+Please visit: http://net4.ccs.neu.edu/home/ameym06/story/index.htm?../documentation/ for Project Documentation
