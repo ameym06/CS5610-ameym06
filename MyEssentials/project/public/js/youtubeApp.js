@@ -1,6 +1,9 @@
-﻿
+﻿//youtubeAppController
+
 app.controller("youtubeAppController", function ($scope, $http, $location, $cookieStore, $modal) {
-	$scope.access_token = $cookieStore.get('access_token');
+	
+    //access token required to show/hide elements of navigation bar
+    $scope.access_token = $cookieStore.get('access_token');
     
     $scope.goToHome = function () {
         $location.path('/');
@@ -8,14 +11,16 @@ app.controller("youtubeAppController", function ($scope, $http, $location, $cook
 
     var video = "";
     
-
-    $scope.searchVideos =
-        function () {
+    //function to search videos. This function invokes the Youtube API
+    $scope.searchVideos = function () {
+        $scope.fail = false;
         video = "";
         var request;
         var query = $scope.query;
         if(query == undefined){
-        	alert("Please Enter a Search Term")
+            $scope.fail = true;
+            $scope.failMessage = "Please enter a Search Term";
+            return;
         }
         else{
         	 $http.get("https://www.googleapis.com/youtube/v3/search?q=" + query +
@@ -30,18 +35,19 @@ app.controller("youtubeAppController", function ($scope, $http, $location, $cook
        
       };
 
+    //Embed the videos in HTML
     $scope.embed = function (response) {
         type = response.id.kind;
         if (type == "youtube#video") {
             if (response.id.videoId != undefined) {
-                video = video.concat(refine(response));
+                video = video.concat(toHTML(response));
                 document.getElementById("videoResults").innerHTML = video;
             }
         }
     };
 
-
-    var refine = function (response) {
+    //function to create <div> for every element
+    var toHTML = function (response) {
         var div = "<div class=\"well text-center\"><div class=\"container\"><h4 class=\"novaMono\">Title: " + response.snippet.title + "</h4></div> ";
         div = div.concat("<div class=\"container\"><span>Channel: " + response.snippet.channelTitle + "</span></div> ");
         div = div.concat("<iframe type='text/html' width='50%' height='300px' " +

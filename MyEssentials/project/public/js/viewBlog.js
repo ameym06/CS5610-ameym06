@@ -8,8 +8,7 @@
 	//Redirection to Home Page
 	$scope.goToHome = function(){
 		$location.path('/');
-	}
-	
+	};	
 	
 	//Login function
 	$scope.login = function () {
@@ -19,6 +18,7 @@
         });
 
         modalInstance.result.then(function () {
+            $location.url($location.path('/'));
             $location.path('/');
         });
         
@@ -29,16 +29,19 @@
         $cookieStore.remove('access_token');
         $cookieStore.remove('uid');
         $scope.access_token = $cookieStore.get('access_token');
+        $location.url($location.path('/'));
         $location.path('/');
     };
 
     //Signup function
     $scope.signUp = function () {
+        $location.url($location.path('/'));
         $location.path('/signup');
     };
     
   //Shortcut to view Profile
     $scope.viewProfile = function(){
+        $location.url($location.path('/'));
     	$location.path('/profile');
     };
 		

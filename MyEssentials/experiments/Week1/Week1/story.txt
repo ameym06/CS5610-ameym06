@@ -1,0 +1,5 @@
+font-size-manipulate.html				Font Manipulation
+google-maps-geolocation.html			Google Maps Geolocation
+google-maps-marker.html  				Google Maps Marker
+html-basics.html 						HTML Basics
+localStorage.html						HTML Local Storage

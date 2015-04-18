@@ -105,6 +105,8 @@ var auth = function(req, res, next)
 };
 /* Set up passport : END */
 
+//POST requests begin
+
 app.post("/api/login", passport.authenticate("local"), function(req, res)
 {	
 	
@@ -135,6 +137,9 @@ app.post("/api/blog/", function(req, res){
 	
 }); 
 
+//POST requests end
+
+//GET requests begin
 
 app.get("/api/profile/:uid",function(req,res){
 	var uid = req.params.uid;
@@ -144,5 +149,10 @@ app.get("/api/profile/:uid",function(req,res){
 	})
 	
 });
+
+//GET requests end
+
+//Server listening to port NodeJS Port on Openshift
+//Or port 3000 on localhost
 
 app.listen(port, ip);

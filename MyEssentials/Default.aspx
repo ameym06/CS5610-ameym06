@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="en">
 
@@ -22,8 +22,8 @@
             <li><a href="images/autoimage.aspx" target="_blank">Images</a></li>
             <li><a href="blog/" target="_blank">Blog</a></li>
             <li><a href="story/index.htm?../experiments/" target="_blank">Experiments</a></li>
-            <li><a href="story/index.htm?../experiments/" target="_blank">Project</a></li>
-            <li><a href="story/index.htm?../experiments/" target="_blank">Project Documentation</a></li>
+            <li><a href="http://soundbytes-openshifteramey6.rhcloud.com/" target="_blank">Project</a></li>
+            <li><a href="story/index.htm?../documentation/" target="_blank">Project Documentation</a></li>
             <li><a href="https://github.com/ameym06/CS5610-ameym06" target="_blank">Github</a></li>
     </ul>
     

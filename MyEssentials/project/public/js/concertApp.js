@@ -2,19 +2,21 @@
 	$scope.access_token = $cookieStore.get('access_token');
 	var concerts = [];
     
+    /*Go to Home Page*/
     $scope.goToHome = function () {
         $location.path('/');
     };
  
-    $scope.events = $location.search().events;
-	console.log($scope.events);
-	
+   //Search all the events related to search query
     $scope.searchConcerts = function () {
        /*Get all events*/
+       $scope.fail=false;
     	var concerts="";
         var query = $scope.query;
         if(query == undefined){
-        	alert("Please Enter a Search Term");
+            $scope.fail = true;
+            $scope.failMessage = "Please enter a Search Term";
+            return;
         }
         else{
         	var oArgs = {
@@ -28,8 +30,8 @@
                     var len = Events.length;
                     for (var i = 0; i < len; i++) {
                     	concerts = concerts.concat(populateConcertInfo(Events[i]));
+                    	document.getElementById("concertResults").innerHTML = concerts;
                     }
-                    document.getElementById("concertResults").innerHTML = concerts;
                 });
         }
         
@@ -67,6 +69,7 @@
             div = div.concat("<a href=\"" + obj.url + "\" target=\"_blank\">Event Details</a><br/>");
             return div.concat("</div><hr/>");
         }
+	return "";
     };
     
   //Login function

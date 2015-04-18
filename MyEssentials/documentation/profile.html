@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Documentation</title>
+    <link href="./css/bootstrap.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <h1>My Blogs Functionality</h1>
+        <hr />
+        <p>
+            This Page can be used only by registered users who have logged into the application.
+            This Page can be used by the users to view their own blogs. When the user opens this page, it presents a list of Blogs
+            written by the user. A link to "detailed blog-view page" is also provided alongwith.
+        </p>
+        <br />
+        <hr />
+        <h3>Snapshot</h3>
+        <div>
+            <img class="img img-responsive" src="images/MyBlogs.png" />
+        </div>
+        <hr />
+        <h3>My Blogs Services</h3>
+        <p>
+            My Blogs services are designed using Angular.JS at client end and Node.JS and MongoDB at server end.
+            <ol>
+                <li>My Blogs Service - Allows the logged in user to view all their blogs as a list.
+                During the page load, AngularJS requests makes GET request to the NodeJS for all the blogs of the particular user.
+                NodeJS fetches the data from MongoDB and replies back with appropriate content. AngularJS then renders the content onto the web page.
+                </li>
+            </ol>
+        </p>
+        <hr />
+        <a href="viewblogs.html" class="next">Next Page</a>
+    </div>
+</body>
+</html>

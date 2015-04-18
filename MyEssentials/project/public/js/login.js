@@ -1,6 +1,6 @@
 app.controller("loginController", function ($scope, $modalInstance, $http, $cookieStore) {
 
-   
+   $scope.fail = false;
     /*Login click*/
     $scope.login = function (user) {
     	
@@ -11,10 +11,12 @@ app.controller("loginController", function ($scope, $modalInstance, $http, $cook
              $cookieStore.put('uid', res.username);
              $modalInstance.close();
          })
-         .error(function (response) {
-        	 alert("Username and Password Did not Match. Please try again")
-             console.log(response);
-         });
+         .error(function (response, status) {
+                $scope.fail = true;
+                $scope.failMessage = "Provide valid credentials";
+                console.log(response);
+            
+        });
     };
         
 

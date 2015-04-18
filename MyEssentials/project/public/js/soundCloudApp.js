@@ -1,23 +1,4 @@
-﻿/* Add a track to favorite music */
-var addFavMusic = function(meta)
-{
-    var url = meta.substr(0, meta.indexOf(DELIMITER));
-    var title = meta.substr(meta.indexOf(DELIMITER) + 11);
-    var xmlHttp = new XMLHttpRequest();
-    url = url.replace("http://", "http");
-    url = url.replace(new RegExp("/", "g"), DELIMITER);
-    xmlHttp.open("PUT", "/api/user/" + uid + "/music/" + url, false);
-    xmlHttp.send(null);
-
-    /* Log and trace */
-    var msg = "Added " + title + " to your playlist";
-    console.log("%c   [echo] " + msg,
-                "font-family: Courier New;");
-    xmlHttp.open("PUT", "/api/user/" + uid + "/trace/" + msg, false);
-    xmlHttp.send(null);
-
-    return xmlHttp.responseText;
-};
+﻿//soundCloudController
 
 app.controller("soundCloudController", function ($q, $scope, $location, $cookieStore, $modal) {
 	$scope.access_token = $cookieStore.get('access_token');
@@ -35,10 +16,13 @@ app.controller("soundCloudController", function ($q, $scope, $location, $cookieS
 
     /* Search for music by keyword */
     $scope.searchSongs = function () {
-    	var title = $scope.query;
+        $scope.fail = false;
+        var title = $scope.query;
     	music = "";
     	if(title == undefined){
-    		alert("Please Enter a Search Term");
+            $scope.fail = true;
+            $scope.failMessage = "Please provide Search Term";
+            return;
     	}
     	else{
     		SC.get("/tracks", { q: title }, function (res) {

@@ -2,32 +2,51 @@
     function ($scope, $location, $modal, $cookieStore, $http) {
 	//Access token required to check whether user is logged in or logged out
 	$scope.access_token = $cookieStore.get('access_token');
-	
+	$scope.fail=false;
+	$scope.success=false;
+
+
 	//Redirection to Home Page
 	$scope.goToHome = function(){
 		$location.path('/');
 	}
 	
+	//Username required for sending information to the Blog-View Page
 	var uid = $cookieStore.get('uid');
 	
 	//Function to submit blogs
-	$scope.submit = function(blog){
-		blog.username=uid;
-		blog.date = new Date();
-		console.log(blog);
-		console.log(uid);
-		$http.post("/api/blog/", blog)
-		.success(function(res){
-			if(res.returnCode==0){
-				$scope.blog.title="";
-				$scope.blog.content="";
-				alert("Successfully submitted your Blog!");
-			}
-		})
-		
-		.error(function(res){
-			alert("Could not save your Blog. Please try again!");
-		});
+	$scope.submit = function(){
+		$scope.fail=false;
+		$scope.success=false;
+
+		if($scope.title ==undefined || $scope.content == undefined
+			|| $scope.title == "" || $scope.content == ""){
+			$scope.fail=true;
+			$scope.failMessage ="Please enter Blog Title and Content"; 
+			return;
+		}
+		else{
+			var blog={};
+			blog.title=$scope.title;
+			blog.content=$scope.content;
+			blog.username=uid;
+			blog.date = new Date();
+			console.log(blog);
+			console.log(uid);
+			$http.post("/api/blog/", blog)
+			.success(function(res){
+				if(res.returnCode==0){
+					$scope.title="";
+					$scope.content="";
+					$scope.success=true;
+					$scope.successMessage="Successfully submitted your Blog. Go to MyProfile page to find your Blogs!";
+				}
+			})
+			.error(function(res){
+				$scope.fail=true;
+				$scope.failMessage ="Failed to save your Blog. Please try again!"; 
+			});
+		}
 	};
 	
 	

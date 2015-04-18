@@ -1,0 +1,214 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Documentation</title>
+    <link href="./css/bootstrap.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <h1>Introduction</h1>
+        <hr />
+        <br />
+        <p>
+            Sound Bytes is my project under the course Web Developemnt (CS-5610) that I took during my graduation.
+            This web application serves for Guest as well as Registered users. Both, guest and registered users can listen to music,
+            watch youtube videos, find live concerts. The registered Users get the priviledge of writing blogs and viewing their blogs anytime they want. 
+            <br />
+            <h3>APIs used for the project :</h3>
+            <table class="table table-stripped">
+                <thead>
+                    <tr>
+                        <td><b>API</b></td>
+                        <td><b>USE</b></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>SoundCloud API</td>
+                        <td>This API is responsible for fetching the music / songs according to user queries</td>
+                    </tr>
+                    <tr>
+                        <td>Youtube API</td>
+                        <td>This API is responsible for fetching the youtube vidoes according to the user queries</td>
+                    </tr>
+                    <tr>
+                        <td>Eventful API</td>
+                        <td>This API is responsible for fetching the details related to upcoming events that are searched by user</td>
+                    </tr>
+                </tbody>
+            </table>
+        </p>
+        <hr />
+        <h3>Different Pages of Project :</h3>
+        <table class="table">
+            <thead>
+                <tr>
+                    <td><b>PAGE</b></td>
+                    <td><b>DESCRIPTION</b></td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Home Page</td>
+                    <td>This is the Landing page. This page has links to all the services the web application provides. The user could log into the application to use additional services.</td>
+                </tr>
+                <tr>
+                    <td>Login Page</td>
+                    <td>This is the Login page. A registered user can use this page to safely log into the web application</td>
+                </tr>
+                <tr>
+                    <td>Sign Up Page</td>
+                    <td>This page can be used by a new / Guest user to create account. Using the newly created credentials, the user can then log into the application.</td>
+                </tr>
+                <tr>
+                    <td>Sound Cloud Page</td>
+                    <td>This page is used for searching songs / music. This page invokes SoundCloud API to fetch results.</td>
+                </tr>
+                <tr>
+                    <td>Youtube Page</td>
+                    <td>This page is used for searching youtube videos. This page invokes Youtube Data API (v3) to fetch results.</td>
+                </tr>
+                <tr>
+                    <td>Concert Page</td>
+                    <td>This page is used for searching upcoming concerts of their favorite Artist(s). This page invokes Eventful API to fetch results.</td>
+                </tr>
+                <tr>
+                    <td>Blog Page</td>
+                    <td>This page can be used by a Logged-In user to wite blogs. These blogs can be related to the experiences he / she had during any musical event / concert, etc.
+                        The user is free to blog about any topic.
+                    </td>
+                </tr>
+                <tr>
+                    <td>My Blogs Page</td>
+                    <td>This Page fetches all the blogs written by the user from the database. It contains the links to view the entire blog</td>
+                </tr>
+                <tr>
+                    <td>View Blog Page</td>
+                    <td>This Page is used to display a particular blog in details. The User can revisit any blog he / she wants anytime.</td>
+                </tr>
+            </tbody>
+        </table>
+        <hr />
+        <h3>Technologies used:</h3>
+        <table class="table">
+            <thead>
+                <tr>
+                    <td><b>TECHNOLOGY</b></td>
+                    <td><b>PURPOSE</b></td>
+                    <td><b>USED IN</b></td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        HTML
+                    </td>
+                    <td>
+                        All the pages are designed using HTML
+                    </td>
+                    <td>
+                        Client Side
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        CSS / Bootstrap / Bootstrap-themes
+                    </td>
+                    <td>
+                        This is use to enhance the look and feel of project. Bootstarp also makes the pages responsive in nature
+                    </td>
+                    <td>
+                        Client Side
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        AngularJS
+                    </td>
+                    <td>
+                        AngularJS is extensively used technology throughout the project. It implements the MVC Model.
+                        Moreover, AngularJS routing is used to route across different pages. Angular Cookies is used to keep track of sessions.
+                    </td>
+                    <td>
+                        Client Side
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        jQuery
+                    </td>
+                    <td>
+                        JQuery is used very little in this project. It is used only to implement scrolling functionality through the Home Page
+                    </td>
+                    <td>
+                        Client Side
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Java Script
+                    </td>
+                    <td>
+                        JS is used to render the results fetched from Youtube and SoundCloud onto their respective pages
+                    </td>
+                    <td>
+                        Client Side
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Node.JS
+                    </td>
+                    <td>
+                        This technology is the backbone of server side functionality. It receives all the POST and GET calls from the client
+                    </td>
+                    <td>
+                        Server Side
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Express (Node.JS Module)
+                    </td>
+                    <td>
+                        This helps in establishing web services on which the project work.
+                    </td>
+                    <td>
+                        Server Side
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        MongoDB
+                    </td>
+                    <td>
+                        This is the backend used for data storage purpose.
+                    </td>
+                    <td>
+                        Data Storage
+                    </td>
+                </tr>
+                <tr>
+                    <td>Mongoose (Node module)</td>
+                    <td>Provides a way to programmatically interact with the data present in MongoDB data storage.</td>
+                    <td>Server Side</td>
+                </tr>
+            </tbody>
+        </table>
+        <hr />
+        <h3>Browser Compatibility : </h3>
+        <ul>
+            <li>Google Chrome - Optimized</li>
+            <li>Safari - All functionalities working.</li>
+            <li>Firefox - All functionalities working.</li>
+            <li>Internet Explorer - All functionalities working. UI doesn't seem to render as expected</li>
+        </ul>
+        <hr />
+        <br />
+        The complete source of project is available at GitHub: <a href="https://github.com/ameym06/CS5610-ameym06/tree/master/MyEssentials/project">Code</a>
+        <br />
+        <br />
+        <a href="walkthrough.html" class="nextpage">Next Page</a>
+    </div>
+</body>
+</html>

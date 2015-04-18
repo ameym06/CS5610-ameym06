@@ -1,5 +1,6 @@
 ﻿var app = angular.module("musicApp", ['ngRoute','ui.bootstrap', 'ngCookies']);
 
+//Main Route Provider. Following function contains routes to all the pages
 app.config(['$routeProvider',
     function ($routeProvider) {
         $routeProvider.
